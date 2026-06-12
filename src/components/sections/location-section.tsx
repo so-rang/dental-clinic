@@ -3,13 +3,6 @@ import { Reveal } from "@/components/reveal";
 import { SectionLabel } from "@/components/section-label";
 
 export function LocationSection() {
-  const naverMapHref = `https://map.naver.com/p/search/${encodeURIComponent(
-    CLINIC.address.road,
-  )}`;
-  const kakaoMapHref = `https://map.kakao.com/?q=${encodeURIComponent(
-    CLINIC.address.road,
-  )}`;
-
   return (
     <section
       id="location"
@@ -24,7 +17,7 @@ export function LocationSection() {
               id="location-heading"
               className="mt-8 font-display italic text-display-l text-balance leading-[0.95]"
             >
-              선릉역 1번 출구,도보 4분.
+              선릉역 1번 출구, 도보 4분.
             </h2>
           </Reveal>
           <Reveal delay={0.15} className="md:col-span-7 md:col-start-6">
@@ -41,24 +34,6 @@ export function LocationSection() {
           <Reveal className="md:col-span-7">
             <div className="relative aspect-[4/3] md:aspect-[5/4] overflow-hidden bg-paper-deep border border-line">
               <ClinicMap />
-              <div className="absolute bottom-4 left-4 right-4 flex flex-wrap gap-2 z-10">
-                <a
-                  href={naverMapHref}
-                  target="_blank"
-                  rel="noopener"
-                  className="bg-paper border border-ink px-4 py-2 text-[12px] tracking-[0.04em] hover:bg-ink hover:text-paper transition-colors"
-                >
-                  네이버 지도 →
-                </a>
-                <a
-                  href={kakaoMapHref}
-                  target="_blank"
-                  rel="noopener"
-                  className="bg-paper border border-line px-4 py-2 text-[12px] tracking-[0.04em] hover:border-ink transition-colors"
-                >
-                  카카오맵 →
-                </a>
-              </div>
             </div>
           </Reveal>
 
@@ -138,6 +113,7 @@ function ClinicMap() {
         referrerPolicy="no-referrer-when-downgrade"
         className="absolute inset-0 w-full h-full grayscale-[0.15] contrast-[0.95]"
       />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-6 bg-paper-deep" />
       <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-line/40" />
     </>
   );

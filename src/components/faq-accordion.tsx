@@ -31,12 +31,12 @@ export function FaqAccordion({
               aria-expanded={open}
               aria-controls={`faq-${i}`}
               onClick={() => setOpenIndex(open ? null : i)}
-              className="w-full text-left py-7 md:py-8 grid grid-cols-[auto_1fr_auto] items-start gap-4 md:gap-6 group cursor-pointer"
+              className="w-full text-left py-4 md:py-5 grid grid-cols-[auto_1fr_auto] items-start gap-4 md:gap-6 group cursor-pointer"
             >
               <span className="font-display italic text-[14px] tracking-[0.08em] text-muted pt-1.5 tabular-nums">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <span className="font-display italic text-[18px] md:text-[22px] leading-[1.35] text-balance group-hover:text-ultramarine transition-colors">
+              <span className="font-display italic text-[17px] md:text-[20px] leading-[1.35] group-hover:text-ultramarine transition-colors">
                 {item.question}
               </span>
               <span
@@ -71,9 +71,9 @@ export function FaqAccordion({
                   }}
                   className="overflow-hidden"
                 >
-                  <div className="pb-9 md:pb-12 grid grid-cols-[auto_1fr_auto] gap-4 md:gap-6">
+                  <div className="pb-5 md:pb-7 grid grid-cols-[auto_1fr_auto] gap-4 md:gap-6">
                     <span aria-hidden />
-                    <p className="text-[15px] md:text-[16px] leading-[1.85] text-ink-soft max-w-3xl">
+                    <p className="text-[14px] md:text-[15px] leading-[1.75] text-ink-soft max-w-3xl">
                       {item.answer}
                     </p>
                     <span aria-hidden />
