@@ -30,9 +30,6 @@ export function FaqSection() {
               진단·치료 과정·비용·운영에 관해 환자분께서 자주 주시는 질문에
               답합니다. 답에서 풀리지 않는 부분은 상담 때 직접 여쭤보세요.
             </p>
-            <p className="mt-6 text-meta">
-              총 {FAQ.length}개 · {CATEGORIES.length} 카테고리
-            </p>
           </Reveal>
         </div>
 
