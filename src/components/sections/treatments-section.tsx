@@ -17,8 +17,8 @@ export function TreatmentsSection() {
       aria-labelledby="treatments-heading"
       className="border-t border-line bg-paper-deep"
     >
-      <div className="container-page py-28 md:py-44">
-        <div className="grid md:grid-cols-12 gap-8 md:gap-12 mb-16 md:mb-20 md:items-end">
+      <div className="container-page py-16 md:py-24">
+        <div className="grid md:grid-cols-12 gap-8 md:gap-12 mb-10 md:mb-12 md:items-end">
           <Reveal className="md:col-span-4">
             <SectionLabel index="03" label="Treatment" />
             <h2
@@ -32,7 +32,7 @@ export function TreatmentsSection() {
           <Reveal delay={0.15} className="md:col-span-7 md:col-start-6">
             <p className="text-[16px] md:text-[18px] leading-[1.85] text-ink-soft">
               임플란트·보철·교정·일반 진료를 분과별 전문의가 한 자리에서
-              진행합니다. 환자분께서 여러 병원을 옮기지 않으셔도, 어크로스 안에서
+              진행합니다. 환자분께서 여러 병원을 옮기지 않으셔도, 정단아치과 안에서
               초진부터 사후 관리까지 같은 의료진이 책임집니다.
             </p>
             <p className="mt-6 text-meta">
@@ -41,7 +41,7 @@ export function TreatmentsSection() {
           </Reveal>
         </div>
 
-        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12 md:gap-y-20">
+        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10 md:gap-y-14">
           {TREATMENTS.map((t, i) => {
             const tone = TONE_MAP[t.slug as keyof typeof TONE_MAP];
             return (
@@ -66,8 +66,11 @@ export function TreatmentsSection() {
                         {t.english}
                       </p>
                     </div>
-                    <p className="mt-5 text-[14px] leading-[1.7] text-ink-soft">
+                    <p className="mt-5 font-display italic text-[14px] leading-[1.6] text-ink-soft">
                       {t.tagline}
+                    </p>
+                    <p className="mt-3 text-[13px] md:text-[14px] leading-[1.75] text-ink-soft/85">
+                      {t.description}
                     </p>
                   </article>
                 </li>
