@@ -12,7 +12,8 @@
 
   --font-sans: "Pretendard Variable", system-ui, -apple-system,
     BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-display: var(--font-cormorant), Georgia, "Times New Roman", serif;
+  --font-display: var(--font-cormorant), "Pretendard Variable", Georgia,
+    "Times New Roman", serif;
 
   --tracking-wide-meta: 0.1em;
   --tracking-menu: 0.05em;
@@ -20,7 +21,8 @@
 }
 
 @theme inline {
-  --font-display: var(--font-cormorant), Georgia, "Times New Roman", serif;
+  --font-display: var(--font-cormorant), "Pretendard Variable", Georgia,
+    "Times New Roman", serif;
 }
 
 @layer base {
@@ -54,6 +56,15 @@
     font-family: var(--font-display);
     font-weight: 400;
     letter-spacing: -0.015em;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  /* Korean text should not render fake-italic from the latin serif —
+     when the glyph falls back to Pretendard, drop italic. */
+  :lang(ko) {
+    word-break: keep-all;
+    overflow-wrap: break-word;
   }
 
   hr {
@@ -85,27 +96,35 @@
   }
 
   .text-display-xl {
-    font-size: clamp(3.25rem, 9vw, 7.5rem);
-    line-height: 0.95;
+    font-size: clamp(2.5rem, 5.4vw, 4.75rem);
+    line-height: 1.12;
     letter-spacing: -0.02em;
+    word-break: keep-all;
+    overflow-wrap: break-word;
   }
 
   .text-display-l {
-    font-size: clamp(2.75rem, 7vw, 6.25rem);
-    line-height: 1;
+    font-size: clamp(2.25rem, 4.4vw, 3.75rem);
+    line-height: 1.15;
     letter-spacing: -0.015em;
+    word-break: keep-all;
+    overflow-wrap: break-word;
   }
 
   .text-display-m {
-    font-size: clamp(2rem, 5vw, 4.5rem);
-    line-height: 1.05;
+    font-size: clamp(1.75rem, 3.4vw, 2.75rem);
+    line-height: 1.2;
     letter-spacing: -0.01em;
+    word-break: keep-all;
+    overflow-wrap: break-word;
   }
 
   .text-display-s {
-    font-size: clamp(1.5rem, 3.5vw, 3rem);
-    line-height: 1.1;
+    font-size: clamp(1.375rem, 2.4vw, 2rem);
+    line-height: 1.25;
     letter-spacing: -0.005em;
+    word-break: keep-all;
+    overflow-wrap: break-word;
   }
 
   .text-eyebrow {

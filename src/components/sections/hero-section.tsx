@@ -27,39 +27,43 @@ export function HeroSection() {
 
         {/* Main copy */}
         <div className="flex-1 flex items-center justify-center -mt-4">
-          <div className="w-full text-center">
-            <motion.h1
+          <div className="w-full text-center max-w-5xl mx-auto px-4">
+            <h1
               id="hero-heading"
-              initial={reduce ? false : { opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1.2, delay: 0.2 }}
-              className="font-display italic text-display-xl text-balance px-2"
+              className="font-display italic text-display-xl"
             >
-              {CLINIC.tagline.split("").map((char, i) => (
-                <motion.span
-                  key={i}
-                  initial={
-                    reduce ? false : { opacity: 0, y: 30, filter: "blur(8px)" }
-                  }
-                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                  transition={{
-                    duration: 1,
-                    ease: [0.22, 1, 0.36, 1],
-                    delay: 0.35 + i * 0.04,
-                  }}
-                  className="inline-block"
-                  style={{ whiteSpace: char === " " ? "pre" : "normal" }}
-                >
-                  {char}
-                </motion.span>
-              ))}
-            </motion.h1>
+              {CLINIC.tagline.split(/(\s+)/).map((segment, i) =>
+                segment.trim() === "" ? (
+                  <span key={i}>{segment}</span>
+                ) : (
+                  <span
+                    key={i}
+                    className="inline-block overflow-hidden align-bottom"
+                  >
+                    <motion.span
+                      initial={
+                        reduce ? false : { y: "115%" }
+                      }
+                      animate={{ y: 0 }}
+                      transition={{
+                        duration: 1.1,
+                        ease: [0.22, 1, 0.36, 1],
+                        delay: 0.4 + i * 0.12,
+                      }}
+                      className="inline-block"
+                    >
+                      {segment}
+                    </motion.span>
+                  </span>
+                ),
+              )}
+            </h1>
 
             <motion.p
               initial={reduce ? false : { opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.4 }}
-              className="mt-8 text-[14px] tracking-[0.18em] uppercase text-muted font-sans"
+              className="mt-8 text-[13px] tracking-[0.22em] uppercase text-muted font-sans"
             >
               For an enduring smile
             </motion.p>
