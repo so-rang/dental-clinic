@@ -25,11 +25,9 @@ export function PhilosophySection() {
           <Reveal>
             <h2
               id="philosophy-heading"
-              className="font-display italic text-display-m text-balance leading-[1.05]"
+              className="font-display italic text-display-m leading-[1.15]"
             >
-              치료는 짧을수록,
-              <br />
-              결과는 오래 갈수록 좋습니다.
+              환자 한 분을 평생 봅니다.
             </h2>
           </Reveal>
 

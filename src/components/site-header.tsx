@@ -33,37 +33,37 @@ export function SiteHeader() {
           : "bg-transparent border-b border-transparent"
       }`}
     >
-      <div className="container-page flex items-center justify-between py-5 md:py-6">
+      <div className="container-page flex items-center justify-between py-2 md:py-2.5">
         <Link
           href="/"
           aria-label="정단아치과 홈"
-          className="flex flex-col leading-tight relative z-10"
+          className="flex flex-col leading-none relative z-10"
           onClick={() => setOpen(false)}
         >
-          <span className="font-sans text-[15px] md:text-[16px] font-medium tracking-tight">
+          <span className="font-sans text-[11px] md:text-[12px] font-medium tracking-[0.08em]">
             {CLINIC.name.ko}
           </span>
-          <span className="font-display italic text-[10px] md:text-[11px] tracking-[0.18em] text-muted mt-0.5">
+          <span className="font-display italic text-[8px] md:text-[9px] tracking-[0.22em] text-muted mt-[2px]">
             {CLINIC.name.en}
           </span>
         </Link>
 
         <nav
-          className="hidden md:flex items-center gap-9 text-[14px]"
+          className="hidden md:flex items-center gap-7 text-[12px]"
           aria-label="주요 메뉴"
         >
           {NAV_ITEMS.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="link-underline tracking-[0.02em] hover:text-ultramarine transition-colors duration-300"
+              className="link-underline tracking-[0.04em] hover:text-ultramarine transition-colors duration-300"
             >
               {item.label}
             </Link>
           ))}
           <Link
             href={RESERVATION_HREF}
-            className="ml-2 border border-ink px-5 py-2.5 text-[13px] tracking-[0.04em] hover:bg-ink hover:text-paper transition-colors duration-300"
+            className="ml-1 border border-ink px-3.5 py-1.5 text-[11px] tracking-[0.06em] hover:bg-ink hover:text-paper transition-colors duration-300"
           >
             예약
           </Link>
