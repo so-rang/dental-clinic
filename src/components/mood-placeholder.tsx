@@ -1,3 +1,8 @@
+"use client";
+
+import Image from "next/image";
+import { useState } from "react";
+
 type Tone =
   | "navy"
   | "rose"
@@ -26,6 +31,10 @@ export function MoodPlaceholder({
   caption,
   aspect = "square",
   className = "",
+  src,
+  alt,
+  priority,
+  sizes,
 }: {
   tone?: Tone;
   pattern?: Pattern;
@@ -33,8 +42,13 @@ export function MoodPlaceholder({
   caption?: string;
   aspect?: "square" | "portrait" | "landscape" | "wide" | "full";
   className?: string;
+  src?: string;
+  alt?: string;
+  priority?: boolean;
+  sizes?: string;
 }) {
   const t = TONES[tone];
+  const [imgFailed, setImgFailed] = useState(false);
 
   const aspectClass = {
     square: "aspect-square",
@@ -43,6 +57,45 @@ export function MoodPlaceholder({
     wide: "aspect-[16/9]",
     full: "",
   }[aspect];
+
+  const showImage = src && !imgFailed;
+
+  if (showImage) {
+    return (
+      <figure
+        className={`relative overflow-hidden ${aspectClass} ${className}`}
+        style={{
+          background: `linear-gradient(135deg, ${t.from} 0%, ${t.to} 100%)`,
+        }}
+      >
+        <Image
+          src={src}
+          alt={alt ?? ""}
+          fill
+          priority={priority}
+          sizes={
+            sizes ?? "(min-width:1024px) 25vw, (min-width:768px) 50vw, 100vw"
+          }
+          className="object-cover"
+          onError={() => setImgFailed(true)}
+        />
+        {(label || caption) && (
+          <figcaption className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 bg-gradient-to-t from-black/30 via-transparent to-transparent">
+            {caption && (
+              <p className="text-[10px] tracking-[0.18em] uppercase mb-2 text-paper/85">
+                {caption}
+              </p>
+            )}
+            {label && (
+              <p className="font-display italic text-[28px] md:text-[32px] leading-tight text-paper">
+                {label}
+              </p>
+            )}
+          </figcaption>
+        )}
+      </figure>
+    );
+  }
 
   return (
     <div
@@ -75,12 +128,7 @@ export function MoodPlaceholder({
         </defs>
 
         {pattern === "arc" && (
-          <g
-            stroke={t.ink}
-            strokeWidth="0.4"
-            fill="none"
-            opacity="0.5"
-          >
+          <g stroke={t.ink} strokeWidth="0.4" fill="none" opacity="0.5">
             <circle cx="100" cy="220" r="180" />
             <circle cx="100" cy="220" r="150" />
             <circle cx="100" cy="220" r="120" />
@@ -91,22 +139,10 @@ export function MoodPlaceholder({
         {pattern === "grid" && (
           <g stroke={t.ink} strokeWidth="0.3" opacity="0.4">
             {Array.from({ length: 10 }).map((_, i) => (
-              <line
-                key={`h-${i}`}
-                x1="0"
-                y1={i * 22}
-                x2="200"
-                y2={i * 22}
-              />
+              <line key={`h-${i}`} x1="0" y1={i * 22} x2="200" y2={i * 22} />
             ))}
             {Array.from({ length: 10 }).map((_, i) => (
-              <line
-                key={`v-${i}`}
-                x1={i * 22}
-                y1="0"
-                x2={i * 22}
-                y2="200"
-              />
+              <line key={`v-${i}`} x1={i * 22} y1="0" x2={i * 22} y2="200" />
             ))}
           </g>
         )}

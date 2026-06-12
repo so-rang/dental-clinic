@@ -8,6 +8,7 @@ export function HeroSection() {
 
   return (
     <section
+      id="hero"
       aria-labelledby="hero-heading"
       className="relative min-h-[88vh] md:min-h-[92vh] flex flex-col"
     >

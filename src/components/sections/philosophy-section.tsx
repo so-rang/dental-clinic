@@ -5,6 +5,7 @@ import { SectionLabel } from "@/components/section-label";
 export function PhilosophySection() {
   return (
     <section
+      id="philosophy"
       aria-labelledby="philosophy-heading"
       className="border-t border-line bg-paper"
     >

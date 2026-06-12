@@ -14,6 +14,7 @@ const TONE_MAP = {
 export function TreatmentsSection() {
   return (
     <section
+      id="treatments"
       aria-labelledby="treatments-heading"
       className="border-t border-line bg-paper-deep"
     >
@@ -48,7 +49,7 @@ export function TreatmentsSection() {
               <Reveal key={t.slug} delay={i * 0.08}>
                 <li>
                   <Link
-                    href={`/treatments#${t.slug}`}
+                    href={`#${t.slug}`}
                     className="group block"
                   >
                     <MoodPlaceholder
@@ -56,6 +57,9 @@ export function TreatmentsSection() {
                       pattern={tone.pattern}
                       aspect="portrait"
                       caption={`Treatment ${t.number}`}
+                      src={t.image}
+                      alt={t.imageAlt}
+                      sizes="(min-width:1024px) 25vw, (min-width:768px) 50vw, 100vw"
                       className="transition-[transform,filter] duration-700 group-hover:scale-[1.015]"
                     />
                     <div className="mt-6 flex items-start justify-between gap-3">

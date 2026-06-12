@@ -12,6 +12,7 @@ export function LocationSection() {
 
   return (
     <section
+      id="location"
       aria-labelledby="location-heading"
       className="border-t border-line bg-paper"
     >

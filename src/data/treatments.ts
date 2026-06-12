@@ -48,7 +48,7 @@ export const TREATMENTS: Treatment[] = [
       { step: "04", label: "보철 완성", sub: "정밀 보철 + 교합 조정" },
       { step: "05", label: "장기 관리", sub: "10년 사후 점검 프로토콜" },
     ],
-    image: "/treatments/implant.jpg",
+    image: "/images/implant.png",
     imageAlt: "임플란트 진료 — 어크로스치과",
   },
   {
@@ -86,7 +86,7 @@ export const TREATMENTS: Treatment[] = [
       { step: "04", label: "임시 보철", sub: "기능 · 형태 사전 검증" },
       { step: "05", label: "최종 보철", sub: "교합 조정 · 색조 확인" },
     ],
-    image: "/treatments/esthetic.jpg",
+    image: "/images/prosthodontics.png",
     imageAlt: "심미 보철 진료 — 어크로스치과",
   },
   {
@@ -124,7 +124,7 @@ export const TREATMENTS: Treatment[] = [
       { step: "04", label: "월 1회 조정", sub: "같은 의료진 정기 관리" },
       { step: "05", label: "유지 단계", sub: "유지장치 · 안정 관찰" },
     ],
-    image: "/treatments/orthodontics.jpg",
+    image: "/images/orthodontics.png",
     imageAlt: "교정 진료 — 어크로스치과",
   },
   {
@@ -162,7 +162,7 @@ export const TREATMENTS: Treatment[] = [
       { step: "04", label: "예방 진료", sub: "스케일링 · 불소" },
       { step: "05", label: "정기 점검", sub: "6개월 주기 자동 알림" },
     ],
-    image: "/treatments/general.jpg",
+    image: "/images/general.png",
     imageAlt: "일반 진료 — 어크로스치과",
   },
 ];

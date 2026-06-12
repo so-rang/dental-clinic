@@ -71,6 +71,11 @@
     border-color: var(--color-line);
   }
 
+  /* Anchor scroll offset for sticky header */
+  section[id] {
+    scroll-margin-top: 72px;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     *,
     *::before,

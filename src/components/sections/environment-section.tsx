@@ -6,6 +6,7 @@ import { MoodPlaceholder } from "@/components/mood-placeholder";
 export function EnvironmentSection() {
   return (
     <section
+      id="environment"
       aria-labelledby="environment-heading"
       className="border-t border-line bg-ink text-paper"
     >
@@ -71,6 +72,9 @@ export function EnvironmentSection() {
               aspect="landscape"
               caption="Operatory"
               label="진료실"
+              src="/images/interior.png"
+              alt="어크로스치과 진료실 인테리어"
+              sizes="(min-width:768px) 33vw, 100vw"
             />
             <MoodPlaceholder
               tone="ink"
@@ -78,6 +82,9 @@ export function EnvironmentSection() {
               aspect="landscape"
               caption="Sterilization"
               label="멸균실"
+              src="/images/sterilization.png"
+              alt="어크로스치과 멸균실"
+              sizes="(min-width:768px) 33vw, 100vw"
               className="opacity-95"
             />
             <MoodPlaceholder
@@ -86,6 +93,9 @@ export function EnvironmentSection() {
               aspect="landscape"
               caption="Imaging"
               label="3D CT · 스캐너"
+              src="/images/equipment.png"
+              alt="어크로스치과 진료 장비"
+              sizes="(min-width:768px) 33vw, 100vw"
               className="opacity-90"
             />
           </div>

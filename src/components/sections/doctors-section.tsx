@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { DOCTORS } from "@/data/doctors";
 import { Reveal } from "@/components/reveal";
 import { SectionLabel } from "@/components/section-label";
@@ -12,6 +11,7 @@ const TONE_MAP = {
 export function DoctorsSection() {
   return (
     <section
+      id="doctors"
       aria-labelledby="doctors-heading"
       className="border-t border-line bg-paper"
     >
@@ -48,6 +48,9 @@ export function DoctorsSection() {
                       pattern={tone.pattern}
                       aspect="portrait"
                       caption={d.role}
+                      src={d.image}
+                      alt={d.imageAlt}
+                      sizes="(min-width:768px) 33vw, 100vw"
                     />
                   </div>
 
@@ -86,15 +89,6 @@ export function DoctorsSection() {
           })}
         </ul>
 
-        <Reveal delay={0.2} className="mt-16 md:mt-24 flex justify-center">
-          <Link
-            href="/about"
-            className="link-underline text-[14px] tracking-[0.06em] inline-flex items-center gap-2 text-ink hover:text-ultramarine transition-colors"
-          >
-            의료진 상세 보기
-            <span aria-hidden>→</span>
-          </Link>
-        </Reveal>
       </div>
     </section>
   );

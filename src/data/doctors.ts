@@ -30,7 +30,7 @@ export const DOCTORS: Doctor[] = [
       "대한구강악안면임플란트학회 인정의",
       "American Association of Endodontists Member",
     ],
-    image: "/doctors/park-jiwoon.jpg",
+    image: "/images/doctor-park.png",
     imageAlt: "어크로스치과 대표원장 박지운 보존과 전문의",
   },
   {
@@ -51,7 +51,7 @@ export const DOCTORS: Doctor[] = [
       "대한심미치과학회 정회원",
       "Digital Smile Design (DSD) Certified Dentist",
     ],
-    image: "/doctors/lee-sooah.jpg",
+    image: "/images/doctor-lee.png",
     imageAlt: "어크로스치과 진료원장 이수아 보철과 전문의",
   },
 ];
