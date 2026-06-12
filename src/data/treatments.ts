@@ -20,7 +20,7 @@ export const TREATMENTS: Treatment[] = [
     english: "Implant",
     tagline: "치아 하나를 다시 만드는 일.",
     description:
-      "잃은 치아의 자리를 인공 치근으로 채우고, 그 위에 보철을 얹어 원래 기능을 되찾습니다. 어크로스는 3D CT 진단부터 사후 관리까지 한 자리에서 진행하며, 수술 후 10년 정기 점검 프로토콜을 운영합니다.",
+      "잃은 치아의 자리를 인공 치근으로 채우고, 그 위에 보철을 얹어 원래 기능을 되찾습니다. 정단아치과는 3D CT 진단부터 사후 관리까지 한 자리에서 진행하며, 수술 후 10년 정기 점검 프로토콜을 운영합니다.",
     detail:
       "임플란트는 수술이 끝나는 시점이 아니라 시작점입니다. 정확한 진단과 식립 각도, 보철의 정밀도, 그리고 사후 관리까지 같은 의료진이 책임지는 것이 결과의 수명을 결정합니다.",
     highlights: [
@@ -49,7 +49,7 @@ export const TREATMENTS: Treatment[] = [
       { step: "05", label: "장기 관리", sub: "10년 사후 점검 프로토콜" },
     ],
     image: "/images/implant.png",
-    imageAlt: "임플란트 진료 — 어크로스치과",
+    imageAlt: "임플란트 진료 — 정단아치과",
   },
   {
     slug: "esthetic",
@@ -87,7 +87,7 @@ export const TREATMENTS: Treatment[] = [
       { step: "05", label: "최종 보철", sub: "교합 조정 · 색조 확인" },
     ],
     image: "/images/prosthodontics.png",
-    imageAlt: "심미 보철 진료 — 어크로스치과",
+    imageAlt: "심미 보철 진료 — 정단아치과",
   },
   {
     slug: "orthodontics",
@@ -98,7 +98,7 @@ export const TREATMENTS: Treatment[] = [
     description:
       "치아 배열과 교합을 평균 1년 6개월에서 2년에 걸쳐 점진적으로 개선합니다. 투명 교정·설측 교정·소아 교정 중 환자의 일상에 맞는 방식을 선택합니다.",
     detail:
-      "교정은 결과만큼 과정이 길어, 의료진과 신뢰 관계가 필수입니다. 어크로스는 같은 교정의가 시작부터 종료까지 직접 관리하며, 유지장치 단계까지 책임집니다.",
+      "교정은 결과만큼 과정이 길어, 의료진과 신뢰 관계가 필수입니다. 정단아치과는 같은 교정의가 시작부터 종료까지 직접 관리하며, 유지장치 단계까지 책임집니다.",
     highlights: [
       {
         title: "인비절라인 다이아몬드",
@@ -125,7 +125,7 @@ export const TREATMENTS: Treatment[] = [
       { step: "05", label: "유지 단계", sub: "유지장치 · 안정 관찰" },
     ],
     image: "/images/orthodontics.png",
-    imageAlt: "교정 진료 — 어크로스치과",
+    imageAlt: "교정 진료 — 정단아치과",
   },
   {
     slug: "general",
@@ -136,7 +136,7 @@ export const TREATMENTS: Treatment[] = [
     description:
       "충치, 잇몸, 신경 치료, 스케일링 등 가장 기본이 되는 진료를 정기적으로 봅니다. 큰 치료가 아닌, 큰 치료를 막는 진료입니다.",
     detail:
-      "정기 검진은 가장 저렴하고 효과적인 진료입니다. 어크로스는 환자분께 6개월 단위로 점검 알림을 보내드리고, 작은 신호를 일찍 발견해 큰 치료로 가지 않도록 합니다.",
+      "정기 검진은 가장 저렴하고 효과적인 진료입니다. 정단아치과는 환자분께 6개월 단위로 점검 알림을 보내드리고, 작은 신호를 일찍 발견해 큰 치료로 가지 않도록 합니다.",
     highlights: [
       {
         title: "현미경 신경 치료",
@@ -163,7 +163,7 @@ export const TREATMENTS: Treatment[] = [
       { step: "05", label: "정기 점검", sub: "6개월 주기 자동 알림" },
     ],
     image: "/images/general.png",
-    imageAlt: "일반 진료 — 어크로스치과",
+    imageAlt: "일반 진료 — 정단아치과",
   },
 ];
 

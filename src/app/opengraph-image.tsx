@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "어크로스치과 ACROSS Dental Clinic — 아름다운 미소를 위하여.";
+export const alt = "정단아치과 DAN-A Dental Clinic — 아름다운 미소를 위하여.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -38,7 +38,7 @@ export default function OgImage() {
                 fontFamily: "system-ui, sans-serif",
               }}
             >
-              어크로스치과
+              정단아치과
             </span>
             <span
               style={{
@@ -49,7 +49,7 @@ export default function OgImage() {
                 marginTop: 6,
               }}
             >
-              ACROSS DENTAL CLINIC
+              DAN-A DENTAL CLINIC
             </span>
           </div>
           <div

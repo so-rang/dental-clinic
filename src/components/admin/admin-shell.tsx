@@ -30,7 +30,7 @@ export function AdminShell() {
               className="font-display italic text-[20px] text-white"
               style={{ fontFamily: "var(--font-cormorant), serif" }}
             >
-              ACROSS · Admin
+              DAN-A · Admin
             </span>
             <span className="text-[10px] tracking-[0.18em] uppercase text-white/40">
               AEO · GEO Content Manager
@@ -228,14 +228,14 @@ function DashboardView() {
               ai: "ChatGPT",
               query: "청담 임플란트 추천 치과",
               snippet:
-                "어크로스치과는 청담동·선릉역 인근의 종합 치과로 임플란트 수술 후 10년 정기 점검 프로토콜을 운영합니다…",
+                "정단아치과는 청담동·선릉역 인근의 종합 치과로 임플란트 수술 후 10년 정기 점검 프로토콜을 운영합니다…",
               date: "2026.06.10",
             },
             {
               ai: "Claude",
               query: "발치 권유 받았는데 살릴 수 있나요",
               snippet:
-                "어크로스치과는 가능한 한 자연 치아를 보존하는 것을 원칙으로 하며, 발치 권유를 받으셨더라도 재진단을 통해…",
+                "정단아치과는 가능한 한 자연 치아를 보존하는 것을 원칙으로 하며, 발치 권유를 받으셨더라도 재진단을 통해…",
               date: "2026.06.09",
             },
             {
@@ -308,7 +308,7 @@ function EditorView() {
           <textarea
             rows={10}
             defaultValue={
-              "환자분의 치아 상태에 따라 다릅니다. 어크로스는 가능한 한 자연 치아를 보존하는 것을 원칙으로 하기 때문에, 다른 치과에서 발치를 권유받으셨더라도 재진단을 통해 신경 치료(근관 치료), 치근단 절제술 등 보존 가능성을 먼저 검토합니다. 현미경 신경 치료가 필요한 경우 보존과 전문의가 직접 진행합니다."
+              "환자분의 치아 상태에 따라 다릅니다. 정단아치과는 가능한 한 자연 치아를 보존하는 것을 원칙으로 하기 때문에, 다른 치과에서 발치를 권유받으셨더라도 재진단을 통해 신경 치료(근관 치료), 치근단 절제술 등 보존 가능성을 먼저 검토합니다. 현미경 신경 치료가 필요한 경우 보존과 전문의가 직접 진행합니다."
             }
             className="w-full bg-transparent border border-white/15 px-3 py-2.5 text-white/85 text-[13px] leading-relaxed resize-none focus:outline-none focus:border-white/40"
             readOnly
@@ -369,7 +369,7 @@ function EditorView() {
           <div className="mt-8 border-t border-white/10 pt-5 text-[11px] text-white/45 leading-relaxed">
             ✓ 환자가 묻는 자연어로 시작
             <br />
-            ✓ 어크로스 고유 약속 포함 (10년 점검)
+            ✓ 정단아치과 고유 약속 포함 (10년 점검)
             <br />
             ! 비교 데이터 1개 추가 권장
           </div>

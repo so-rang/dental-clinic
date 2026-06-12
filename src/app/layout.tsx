@@ -12,7 +12,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://across-dental.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://dan-a-dental.vercel.app";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -24,15 +24,15 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "어크로스치과 ACROSS Dental Clinic · 청담",
-    template: "%s · 어크로스치과",
+    default: "정단아치과 DAN-A Dental Clinic · 청담",
+    template: "%s · 정단아치과",
   },
   description:
-    "한 분의 치아를 첫 진단부터 평생 관리까지. 청담동·선릉역 1번 출구 어크로스치과. 임플란트·보철·교정·일반 진료를 한 자리에서.",
-  applicationName: "어크로스치과 ACROSS Dental",
+    "한 분의 치아를 첫 진단부터 평생 관리까지. 청담동·선릉역 1번 출구 정단아치과. 임플란트·보철·교정·일반 진료를 한 자리에서.",
+  applicationName: "정단아치과 DAN-A Dental",
   keywords: [
-    "어크로스치과",
-    "ACROSS Dental",
+    "정단아치과",
+    "DAN-A Dental",
     "청담 치과",
     "선릉역 치과",
     "강남 치과",
@@ -42,9 +42,9 @@ export const metadata: Metadata = {
     "치아 교정",
     "종합 치과",
   ],
-  authors: [{ name: "ACROSS Dental Clinic" }],
-  creator: "ACROSS Dental Clinic",
-  publisher: "ACROSS Dental Clinic",
+  authors: [{ name: "DAN-A Dental Clinic" }],
+  creator: "DAN-A Dental Clinic",
+  publisher: "DAN-A Dental Clinic",
   alternates: {
     canonical: "/",
     languages: {
@@ -52,17 +52,17 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "어크로스치과 ACROSS — 아름다운 미소를 위하여.",
+    title: "정단아치과 DAN-A — 아름다운 미소를 위하여.",
     description:
       "청담·선릉역. 한 분의 치아를 첫 진단부터 평생 관리까지 한 자리에서 봅니다.",
     url: "/",
-    siteName: "어크로스치과",
+    siteName: "정단아치과",
     locale: "ko_KR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "어크로스치과 ACROSS",
+    title: "정단아치과 DAN-A",
     description: "청담·선릉역. 아름다운 미소를 위하여.",
   },
   robots: {

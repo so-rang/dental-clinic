@@ -79,20 +79,6 @@ export function MoodPlaceholder({
           className="object-cover"
           onError={() => setImgFailed(true)}
         />
-        {(label || caption) && (
-          <figcaption className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 bg-gradient-to-t from-black/30 via-transparent to-transparent">
-            {caption && (
-              <p className="text-[10px] tracking-[0.18em] uppercase mb-2 text-paper/85">
-                {caption}
-              </p>
-            )}
-            {label && (
-              <p className="font-display italic text-[28px] md:text-[32px] leading-tight text-paper">
-                {label}
-              </p>
-            )}
-          </figcaption>
-        )}
       </figure>
     );
   }

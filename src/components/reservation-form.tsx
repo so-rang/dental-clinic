@@ -152,7 +152,7 @@ export function ReservationForm() {
                 예약 신청 →
               </button>
               <p className="text-meta">
-                또는 카카오톡 채널 @across-dental 로 직접 메시지
+                또는 카카오톡 채널 @dan-a-dental 로 직접 메시지
               </p>
             </div>
           </motion.form>

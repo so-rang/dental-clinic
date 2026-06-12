@@ -9,7 +9,7 @@ export function PhilosophySection() {
       aria-labelledby="philosophy-heading"
       className="border-t border-line bg-paper"
     >
-      <div className="container-page py-28 md:py-44 grid md:grid-cols-12 gap-10 md:gap-16">
+      <div className="container-page py-16 md:py-24 grid md:grid-cols-12 gap-10 md:gap-16">
         <div className="md:col-span-3">
           <Reveal>
             <SectionLabel index="02" label="Philosophy" />

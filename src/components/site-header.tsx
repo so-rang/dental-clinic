@@ -36,7 +36,7 @@ export function SiteHeader() {
       <div className="container-page flex items-center justify-between py-5 md:py-6">
         <Link
           href="/"
-          aria-label="어크로스치과 홈"
+          aria-label="정단아치과 홈"
           className="flex flex-col leading-tight relative z-10"
           onClick={() => setOpen(false)}
         >

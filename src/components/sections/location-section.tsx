@@ -16,8 +16,8 @@ export function LocationSection() {
       aria-labelledby="location-heading"
       className="border-t border-line bg-paper"
     >
-      <div className="container-page py-28 md:py-44">
-        <div className="grid md:grid-cols-12 gap-8 md:gap-12 mb-16 md:mb-20 md:items-end">
+      <div className="container-page py-16 md:py-24">
+        <div className="grid md:grid-cols-12 gap-8 md:gap-12 mb-10 md:mb-12 md:items-end">
           <Reveal className="md:col-span-4">
             <SectionLabel index="06" label="Location" />
             <h2
@@ -206,7 +206,7 @@ function MapPlaceholder() {
         fontFamily="serif"
         fontStyle="italic"
       >
-        ACROSS
+        DAN-A
       </text>
       <text
         x="160"

@@ -4,4 +4,4 @@ export const SITE_URL =
     ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
     : process.env.VERCEL_URL
       ? `https://${process.env.VERCEL_URL}`
-      : "https://across-dental.vercel.app");
+      : "https://dan-a-dental.vercel.app");

@@ -4,8 +4,8 @@ import { SectionLabel } from "@/components/section-label";
 import { MoodPlaceholder } from "@/components/mood-placeholder";
 
 const TONE_MAP = {
+  "jeong-dana": { tone: "warm-light", pattern: "line" },
   "park-jiwoon": { tone: "sand", pattern: "arc" },
-  "lee-sooah": { tone: "warm-light", pattern: "line" },
 } as const;
 
 export function DoctorsSection() {
@@ -15,8 +15,8 @@ export function DoctorsSection() {
       aria-labelledby="doctors-heading"
       className="border-t border-line bg-paper"
     >
-      <div className="container-page py-28 md:py-44">
-        <div className="grid md:grid-cols-12 gap-8 md:gap-12 mb-16 md:mb-20 md:items-end">
+      <div className="container-page py-16 md:py-24">
+        <div className="grid md:grid-cols-12 gap-8 md:gap-12 mb-10 md:mb-12 md:items-end">
           <Reveal className="md:col-span-4">
             <SectionLabel index="04" label="Doctors" />
             <h2
@@ -30,7 +30,7 @@ export function DoctorsSection() {
           </Reveal>
           <Reveal delay={0.15} className="md:col-span-7 md:col-start-6">
             <p className="text-[16px] md:text-[18px] leading-[1.85] text-ink-soft">
-              어크로스는 초진부터 사후 관리까지 같은 의료진이 책임지는 진료
+              정단아치과는 초진부터 사후 관리까지 같은 의료진이 책임지는 진료
               시스템을 운영합니다. 환자분과의 신뢰는 진료의 결과만큼 중요합니다.
             </p>
           </Reveal>

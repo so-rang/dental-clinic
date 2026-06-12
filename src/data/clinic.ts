@@ -1,14 +1,14 @@
 export const CLINIC = {
   name: {
-    ko: "어크로스치과",
-    en: "ACROSS DENTAL",
-    enFull: "ACROSS Dental Clinic",
+    ko: "정단아치과",
+    en: "DAN-A DENTAL",
+    enFull: "DAN-A Dental Clinic",
   },
   tagline: "아름다운 미소를 위하여.",
   taglineEn: "For an enduring smile.",
 
   philosophy:
-    "한 분의 치아를, 첫 진단부터 평생 관리까지 한 자리에서 봅니다. 치료는 짧을수록, 결과는 오래 갈수록 좋습니다. 어크로스는 그렇게 일합니다.",
+    "한 분의 치아를, 첫 진단부터 평생 관리까지 한 자리에서 봅니다. 치료는 짧을수록, 결과는 오래 갈수록 좋습니다. 정단아치과는 그렇게 일합니다.",
 
   philosophyShort: "한 분을 끝까지 봅니다.",
 
@@ -43,17 +43,17 @@ export const CLINIC = {
     phone: "02-538-1004",
     phoneDisplay: "02 538 1004",
     phoneHref: "tel:02-538-1004",
-    kakao: "@across-dental",
-    kakaoHref: "https://pf.kakao.com/_across-dental",
-    email: "hello@across-dental.kr",
-    emailHref: "mailto:hello@across-dental.kr",
+    kakao: "@dan-a-dental",
+    kakaoHref: "https://pf.kakao.com/_dan-a-dental",
+    email: "hello@dan-a-dental.kr",
+    emailHref: "mailto:hello@dan-a-dental.kr",
   },
 
   legal: {
-    representative: "박지운",
+    representative: "정단아",
     businessNo: "888-88-88888",
     medicalLicense: "강남구보건소 의료기관 제 2024-0531호",
-    healthInfoOfficer: "박지운",
+    healthInfoOfficer: "정단아",
   },
 
   environment: [
