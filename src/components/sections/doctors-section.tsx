@@ -23,9 +23,7 @@ export function DoctorsSection() {
               id="doctors-heading"
               className="mt-8 font-display italic text-display-l text-balance leading-[0.95]"
             >
-              같은 의료진이
-              <br />
-              끝까지 봅니다.
+              같은 의료진이끝까지 봅니다.
             </h2>
           </Reveal>
           <Reveal delay={0.15} className="md:col-span-7 md:col-start-6">

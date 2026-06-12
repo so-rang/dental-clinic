@@ -24,9 +24,7 @@ export function LocationSection() {
               id="location-heading"
               className="mt-8 font-display italic text-display-l text-balance leading-[0.95]"
             >
-              선릉역 1번 출구,
-              <br />
-              도보 4분.
+              선릉역 1번 출구,도보 4분.
             </h2>
           </Reveal>
           <Reveal delay={0.15} className="md:col-span-7 md:col-start-6">
@@ -39,11 +37,11 @@ export function LocationSection() {
         </div>
 
         <div className="grid md:grid-cols-12 gap-8 md:gap-10">
-          {/* Map placeholder */}
+          {/* Map */}
           <Reveal className="md:col-span-7">
             <div className="relative aspect-[4/3] md:aspect-[5/4] overflow-hidden bg-paper-deep border border-line">
-              <MapPlaceholder />
-              <div className="absolute bottom-4 left-4 right-4 flex flex-wrap gap-2">
+              <ClinicMap />
+              <div className="absolute bottom-4 left-4 right-4 flex flex-wrap gap-2 z-10">
                 <a
                   href={naverMapHref}
                   target="_blank"
@@ -120,119 +118,27 @@ export function LocationSection() {
   );
 }
 
-function MapPlaceholder() {
+function ClinicMap() {
+  const { latitude, longitude } = CLINIC.address;
+  const delta = 0.004;
+  const bbox = [
+    longitude - delta,
+    latitude - delta * 0.7,
+    longitude + delta,
+    latitude + delta * 0.7,
+  ].join(",");
+  const src = `https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=mapnik&marker=${latitude},${longitude}`;
+
   return (
-    <svg
-      viewBox="0 0 400 320"
-      className="absolute inset-0 w-full h-full"
-      role="img"
-      aria-label="청담·선릉역 인근 약도"
-    >
-      <defs>
-        <pattern
-          id="map-grid"
-          width="32"
-          height="32"
-          patternUnits="userSpaceOnUse"
-        >
-          <path
-            d="M 32 0 L 0 0 0 32"
-            fill="none"
-            stroke="#E5E3DE"
-            strokeWidth="1"
-          />
-        </pattern>
-      </defs>
-      <rect width="400" height="320" fill="#F2F0EA" />
-      <rect width="400" height="320" fill="url(#map-grid)" />
-
-      {/* Streets */}
-      <line x1="0" y1="180" x2="400" y2="180" stroke="#D5D3CD" strokeWidth="14" />
-      <line x1="220" y1="0" x2="220" y2="320" stroke="#D5D3CD" strokeWidth="10" />
-      <line
-        x1="0"
-        y1="90"
-        x2="400"
-        y2="90"
-        stroke="#DAD8D2"
-        strokeWidth="6"
+    <>
+      <iframe
+        src={src}
+        title="정단아치과 위치 지도"
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        className="absolute inset-0 w-full h-full grayscale-[0.15] contrast-[0.95]"
       />
-
-      {/* Street labels */}
-      <text x="14" y="174" fontSize="9" fill="#8A8A85" letterSpacing="1.5">
-        TEHERAN-RO
-      </text>
-      <text x="14" y="86" fontSize="9" fill="#8A8A85" letterSpacing="1.5">
-        EONJU-RO
-      </text>
-      <text
-        x="232"
-        y="318"
-        fontSize="9"
-        fill="#8A8A85"
-        letterSpacing="1.5"
-      >
-        SAMSEONG-RO
-      </text>
-
-      {/* Subway dots */}
-      <g>
-        <circle cx="120" cy="180" r="9" fill="#FAFAF7" stroke="#1A1A1A" />
-        <text x="98" y="200" fontSize="10" fill="#1A1A1A" fontWeight="600">
-          선릉
-        </text>
-      </g>
-      <g>
-        <circle cx="310" cy="180" r="7" fill="#FAFAF7" stroke="#1A1A1A" />
-        <text x="290" y="200" fontSize="10" fill="#1A1A1A">
-          삼성중앙
-        </text>
-      </g>
-
-      {/* Clinic pin */}
-      <g transform="translate(160 110)">
-        <circle r="32" fill="#2D4FBF" opacity="0.12" />
-        <circle r="20" fill="#2D4FBF" opacity="0.22" />
-        <circle r="9" fill="#2D4FBF" />
-        <line y1="9" y2="62" stroke="#2D4FBF" strokeWidth="1.5" />
-      </g>
-      <text
-        x="160"
-        y="92"
-        textAnchor="middle"
-        fontSize="11"
-        fill="#1A1A1A"
-        fontWeight="600"
-        fontFamily="serif"
-        fontStyle="italic"
-      >
-        DAN-A
-      </text>
-      <text
-        x="160"
-        y="105"
-        textAnchor="middle"
-        fontSize="9"
-        fill="#1A1A1A"
-        letterSpacing="0.5"
-      >
-        Dental Clinic
-      </text>
-
-      {/* Compass */}
-      <g transform="translate(370 30)">
-        <line y2="14" stroke="#1A1A1A" strokeWidth="1" />
-        <text
-          x="0"
-          y="-2"
-          textAnchor="middle"
-          fontSize="9"
-          fill="#1A1A1A"
-          fontWeight="600"
-        >
-          N
-        </text>
-      </g>
-    </svg>
+      <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-line/40" />
+    </>
   );
 }

@@ -14,11 +14,6 @@ export function PhilosophySection() {
           <Reveal>
             <SectionLabel index="02" label="Philosophy" />
           </Reveal>
-          <Reveal delay={0.1} className="mt-8 hidden md:block">
-            <p className="font-display italic text-[40px] leading-tight text-ink-soft">
-              {CLINIC.philosophyShort}
-            </p>
-          </Reveal>
         </div>
 
         <div className="md:col-span-9">
@@ -27,12 +22,12 @@ export function PhilosophySection() {
               id="philosophy-heading"
               className="font-display italic text-display-m leading-[1.15]"
             >
-              환자 한 분을 평생 봅니다.
+              치료는 짧게, 결과는 오래.
             </h2>
           </Reveal>
 
           <Reveal delay={0.15}>
-            <p className="mt-10 md:mt-14 max-w-2xl text-[17px] md:text-[19px] leading-[1.85] text-ink-soft">
+            <p className="mt-8 max-w-2xl text-[17px] md:text-[19px] leading-[1.85] text-ink-soft">
               {CLINIC.philosophy}
             </p>
           </Reveal>
