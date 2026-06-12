@@ -5,6 +5,8 @@ import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
 import { SectionLabel } from "@/components/section-label";
 import { MoodPlaceholder } from "@/components/mood-placeholder";
+import { JsonLd } from "@/components/json-ld";
+import { breadcrumbSchema, doctorsSchema } from "@/lib/json-ld";
 import { CLINIC } from "@/data/clinic";
 import { DOCTORS } from "@/data/doctors";
 
@@ -22,6 +24,16 @@ const TONE_MAP = {
 export default function AboutPage() {
   return (
     <>
+      {doctorsSchema().map((d, i) => (
+        <JsonLd key={i} id={`ld-doctor-${i}`} data={d} />
+      ))}
+      <JsonLd
+        id="ld-breadcrumb"
+        data={breadcrumbSchema([
+          { name: "Home", href: "/" },
+          { name: "의료진", href: "/about" },
+        ])}
+      />
       <SiteHeader />
       <main className="flex-1">
         <PageHero

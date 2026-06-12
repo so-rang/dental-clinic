@@ -1,0 +1,29 @@
+import type { MetadataRoute } from "next";
+import { SITE_URL } from "@/lib/site-url";
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const now = new Date();
+  const routes = [
+    { path: "/", priority: 1.0, changeFrequency: "weekly" as const },
+    { path: "/about", priority: 0.9, changeFrequency: "monthly" as const },
+    {
+      path: "/treatments",
+      priority: 0.9,
+      changeFrequency: "monthly" as const,
+    },
+    { path: "/location", priority: 0.8, changeFrequency: "monthly" as const },
+    {
+      path: "/reservation",
+      priority: 0.9,
+      changeFrequency: "monthly" as const,
+    },
+    { path: "/faq", priority: 0.85, changeFrequency: "weekly" as const },
+  ];
+
+  return routes.map((r) => ({
+    url: `${SITE_URL}${r.path}`,
+    lastModified: now,
+    changeFrequency: r.changeFrequency,
+    priority: r.priority,
+  }));
+}

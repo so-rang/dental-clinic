@@ -5,6 +5,9 @@ import { SiteFooter } from "@/components/site-footer";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
 import { MoodPlaceholder } from "@/components/mood-placeholder";
+import { JsonLd } from "@/components/json-ld";
+import { breadcrumbSchema } from "@/lib/json-ld";
+import { SITE_URL } from "@/lib/site-url";
 import { TREATMENTS } from "@/data/treatments";
 
 export const metadata: Metadata = {
@@ -21,8 +24,33 @@ const TONE_MAP = {
 } as const;
 
 export default function TreatmentsPage() {
+  const proceduresSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: TREATMENTS.map((t, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: {
+        "@type": "MedicalProcedure",
+        name: t.name,
+        alternateName: t.english,
+        description: t.description,
+        url: `${SITE_URL}/treatments#${t.slug}`,
+        procedureType: "Therapeutic",
+      },
+    })),
+  };
+
   return (
     <>
+      <JsonLd id="ld-procedures" data={proceduresSchema} />
+      <JsonLd
+        id="ld-breadcrumb"
+        data={breadcrumbSchema([
+          { name: "Home", href: "/" },
+          { name: "진료안내", href: "/treatments" },
+        ])}
+      />
       <SiteHeader />
       <main className="flex-1">
         <PageHero

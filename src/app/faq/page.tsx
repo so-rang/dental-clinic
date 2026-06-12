@@ -3,6 +3,8 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { PageHero } from "@/components/page-hero";
 import { FaqAccordion } from "@/components/faq-accordion";
+import { JsonLd } from "@/components/json-ld";
+import { breadcrumbSchema, faqSchema } from "@/lib/json-ld";
 import { FAQ, FAQ_CATEGORIES, type FaqCategory } from "@/data/faq";
 
 export const metadata: Metadata = {
@@ -16,6 +18,14 @@ const CATEGORIES: FaqCategory[] = ["treatment", "process", "operation"];
 export default function FaqPage() {
   return (
     <>
+      <JsonLd id="ld-faq" data={faqSchema()} />
+      <JsonLd
+        id="ld-breadcrumb"
+        data={breadcrumbSchema([
+          { name: "Home", href: "/" },
+          { name: "FAQ", href: "/faq" },
+        ])}
+      />
       <SiteHeader />
       <main className="flex-1">
         <PageHero

@@ -3,6 +3,8 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { PageHero } from "@/components/page-hero";
 import { ReservationForm } from "@/components/reservation-form";
+import { JsonLd } from "@/components/json-ld";
+import { breadcrumbSchema } from "@/lib/json-ld";
 import { CLINIC } from "@/data/clinic";
 
 export const metadata: Metadata = {
@@ -14,6 +16,13 @@ export const metadata: Metadata = {
 export default function ReservationPage() {
   return (
     <>
+      <JsonLd
+        id="ld-breadcrumb"
+        data={breadcrumbSchema([
+          { name: "Home", href: "/" },
+          { name: "예약 · 문의", href: "/reservation" },
+        ])}
+      />
       <SiteHeader />
       <main className="flex-1">
         <PageHero

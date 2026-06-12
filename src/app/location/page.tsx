@@ -4,6 +4,8 @@ import { SiteFooter } from "@/components/site-footer";
 import { PageHero } from "@/components/page-hero";
 import { LocationSection } from "@/components/sections/location-section";
 import { Reveal } from "@/components/reveal";
+import { JsonLd } from "@/components/json-ld";
+import { breadcrumbSchema } from "@/lib/json-ld";
 
 export const metadata: Metadata = {
   title: "오시는 길 · 운영시간",
@@ -14,6 +16,13 @@ export const metadata: Metadata = {
 export default function LocationPage() {
   return (
     <>
+      <JsonLd
+        id="ld-breadcrumb"
+        data={breadcrumbSchema([
+          { name: "Home", href: "/" },
+          { name: "오시는 길", href: "/location" },
+        ])}
+      />
       <SiteHeader />
       <main className="flex-1">
         <PageHero
