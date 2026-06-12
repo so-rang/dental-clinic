@@ -19,7 +19,7 @@ export function TreatmentsSection() {
       className="border-t border-line bg-paper-deep"
     >
       <div className="container-page py-28 md:py-44">
-        <div className="grid md:grid-cols-12 gap-8 md:gap-12 mb-16 md:mb-24">
+        <div className="grid md:grid-cols-12 gap-8 md:gap-12 mb-16 md:mb-20 md:items-end">
           <Reveal className="md:col-span-4">
             <SectionLabel index="03" label="Treatment" />
             <h2
