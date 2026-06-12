@@ -25,7 +25,7 @@ export function TreatmentsSection() {
               id="treatments-heading"
               className="mt-8 font-display italic text-display-l text-balance leading-[0.95]"
             >
-              네 가지 진료, 한 자리에서.
+              네 가지 진료, 한 자리에서
             </h2>
           </Reveal>
           <Reveal delay={0.15} className="md:col-span-7 md:col-start-6">

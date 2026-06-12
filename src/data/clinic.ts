@@ -4,13 +4,13 @@ export const CLINIC = {
     en: "DAN-A DENTAL",
     enFull: "DAN-A Dental Clinic",
   },
-  tagline: "아름다운 미소를 위하여.",
+  tagline: "아름다운 미소를 위하여",
   taglineEn: "For an enduring smile.",
 
   philosophy:
     "정밀한 진단으로 치료를 줄이고, 같은 의료진의 사후 관리로 결과를 길게 만듭니다. 정단아치과는 그렇게 일합니다.",
 
-  philosophyShort: "치료는 짧게, 결과는 오래.",
+  philosophyShort: "치료는 짧게, 결과는 오래",
 
   description:
     "청담동에 위치한 종합 치과. 임플란트·보철·교정·일반 진료를 한 자리에서 진행하며, 진단부터 사후 관리까지 같은 의료진이 책임지는 진료 시스템을 운영합니다.",

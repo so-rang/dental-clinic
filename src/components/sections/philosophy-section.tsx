@@ -22,7 +22,7 @@ export function PhilosophySection() {
               id="philosophy-heading"
               className="font-display italic text-display-m leading-[1.15]"
             >
-              치료는 짧게, 결과는 오래.
+              치료는 짧게, 결과는 오래
             </h2>
           </Reveal>
 

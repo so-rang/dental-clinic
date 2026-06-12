@@ -18,7 +18,7 @@ export function ReservationSection() {
               id="reservation-heading"
               className="mt-8 font-display italic text-display-l leading-[1.1]"
             >
-              상담 30분으로 시작합니다.
+              상담 30분으로 시작합니다
             </h2>
           </Reveal>
           <Reveal delay={0.15} className="md:col-span-6 md:col-start-7">

@@ -17,7 +17,7 @@ export function LocationSection() {
               id="location-heading"
               className="mt-8 font-display italic text-display-l text-balance leading-[0.95]"
             >
-              선릉역 1번 출구, 도보 4분.
+              선릉역 1번 출구, 도보 4분
             </h2>
           </Reveal>
           <Reveal delay={0.15} className="md:col-span-7 md:col-start-6">

@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useRef } from "react";
 import {
   motion,
@@ -25,9 +24,6 @@ export function HeroSection() {
   const arcShiftY = useTransform(smoothY, [0, 1], [-30, 30]);
   const glowX = useTransform(smoothX, [0, 1], ["0%", "100%"]);
   const glowY = useTransform(smoothY, [0, 1], ["0%", "100%"]);
-  const copyShiftX = useTransform(smoothX, [0, 1], [-6, 6]);
-  const imgShiftX = useTransform(smoothX, [0, 1], [8, -8]);
-  const imgShiftY = useTransform(smoothY, [0, 1], [8, -8]);
   const glowBg = useMotionTemplate`radial-gradient(38vmax 38vmax at ${glowX} ${glowY}, rgba(45,79,191,0.18), rgba(45,79,191,0.04) 36%, transparent 64%)`;
 
   useEffect(() => {
@@ -50,7 +46,7 @@ export function HeroSection() {
       id="hero"
       ref={sectionRef}
       aria-labelledby="hero-heading"
-      className="relative min-h-[92vh] md:min-h-[96vh] flex flex-col overflow-hidden bg-paper isolate"
+      className="relative min-h-[78vh] md:min-h-[86vh] flex flex-col overflow-hidden bg-paper isolate"
     >
       {/* Rotating concentric arcs */}
       {!reduce && (
@@ -125,101 +121,71 @@ export function HeroSection() {
           <p className="text-eyebrow text-right">Est. 2024 · Seoul</p>
         </motion.div>
 
-        {/* Body: copy + image split */}
-        <div className="flex-1 grid md:grid-cols-12 gap-8 md:gap-12 items-center py-8 md:py-10">
-          {/* Copy */}
-          <motion.div
-            className="md:col-span-7 flex flex-col justify-center"
-            style={!reduce ? { x: copyShiftX } : undefined}
+        {/* Centered hero copy */}
+        <div className="flex-1 flex flex-col items-center justify-center text-center py-12 md:py-16">
+          <motion.p
+            initial={reduce ? false : { opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.25 }}
+            className="font-sans text-[13px] md:text-[14px] font-medium tracking-[0.32em] text-ink"
           >
-            <h1
-              id="hero-heading"
-              className="font-display italic text-display-xl text-left"
-            >
-              {words.map((segment, i) =>
-                segment.trim() === "" ? (
-                  <span key={i}>{segment}</span>
-                ) : (
-                  <span
-                    key={i}
-                    className="inline-block overflow-hidden align-bottom"
+            정단아치과
+          </motion.p>
+          <motion.p
+            initial={reduce ? false : { opacity: 0, y: 6 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.35 }}
+            className="mt-2 font-display italic text-[11px] md:text-[12px] tracking-[0.32em] text-muted"
+          >
+            {CLINIC.name.en}
+          </motion.p>
+
+          <h1
+            id="hero-heading"
+            className="mt-10 md:mt-14 font-display italic text-display-xl text-balance"
+          >
+            {words.map((segment, i) =>
+              segment.trim() === "" ? (
+                <span key={i}>{segment}</span>
+              ) : (
+                <span
+                  key={i}
+                  className="inline-block overflow-hidden align-bottom"
+                >
+                  <motion.span
+                    initial={reduce ? false : { y: "115%" }}
+                    animate={{ y: 0 }}
+                    transition={{
+                      duration: 1.15,
+                      ease: [0.22, 1, 0.36, 1],
+                      delay: 0.55 + i * 0.13,
+                    }}
+                    className="inline-block"
                   >
-                    <motion.span
-                      initial={reduce ? false : { y: "115%" }}
-                      animate={{ y: 0 }}
-                      transition={{
-                        duration: 1.15,
-                        ease: [0.22, 1, 0.36, 1],
-                        delay: 0.45 + i * 0.13,
-                      }}
-                      className="inline-block"
-                    >
-                      {segment}
-                    </motion.span>
-                  </span>
-                ),
-              )}
-            </h1>
+                    {segment}
+                  </motion.span>
+                </span>
+              ),
+            )}
+          </h1>
 
-            <motion.div
-              aria-hidden
-              className="mt-10 h-px bg-ink/50 origin-left"
-              initial={reduce ? false : { scaleX: 0 }}
-              animate={{ scaleX: 1 }}
-              transition={{
-                duration: 1.6,
-                ease: [0.22, 1, 0.36, 1],
-                delay: 1.3,
-              }}
-              style={{ width: "min(280px, 60%)" }}
-            />
+          <motion.div
+            aria-hidden
+            className="mt-10 h-px bg-ink/50"
+            initial={reduce ? false : { scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1], delay: 1.4 }}
+            style={{ width: "min(180px, 40%)" }}
+          />
 
-            <motion.p
-              initial={reduce ? false : { opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.6 }}
-              className="mt-7 text-[12px] tracking-[0.32em] uppercase text-muted font-sans"
-            >
-              For an enduring smile
-            </motion.p>
-          </motion.div>
-
-          {/* Image */}
-          <motion.figure
-            initial={reduce ? false : { opacity: 0, scale: 1.04 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 1.6,
-              ease: [0.22, 1, 0.36, 1],
-              delay: 0.6,
-            }}
-            className="md:col-span-5 relative aspect-[4/5] md:aspect-auto md:h-full md:min-h-[58vh] overflow-hidden bg-paper-deep"
+          <motion.p
+            initial={reduce ? false : { opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.6 }}
+            className="mt-6 text-[12px] tracking-[0.32em] uppercase text-muted font-sans"
           >
-            <motion.div
-              className="absolute inset-0"
-              style={
-                !reduce
-                  ? { x: imgShiftX, y: imgShiftY, scale: 1.06 }
-                  : { scale: 1 }
-              }
-            >
-              <Image
-                src="/images/hero.png"
-                alt="정단아치과 진료실 — 청담동 삼성클라쎄롯데캐슬 3층"
-                fill
-                priority
-                sizes="(min-width:768px) 42vw, 100vw"
-                className="object-cover"
-              />
-            </motion.div>
-            <div
-              aria-hidden
-              className="absolute inset-0 bg-gradient-to-tr from-ink/20 via-transparent to-ink/10 mix-blend-multiply"
-            />
-            <figcaption className="absolute bottom-5 left-5 text-[10px] tracking-[0.18em] uppercase text-paper/85">
-              N°01 — Operatory
-            </figcaption>
-          </motion.figure>
+            For an enduring smile
+          </motion.p>
         </div>
 
         {/* Bottom: sweeping line + meta + scroll cue */}
