@@ -27,7 +27,7 @@ export function FaqSection() {
               id="faq-heading"
               className="mt-6 font-display italic text-display-l leading-[1.1]"
             >
-              자주 묻는 질문에 답합니다
+              자주 묻는 질문
             </h2>
           </Reveal>
           <Reveal delay={0.15} className="md:col-span-6 md:col-start-7">
