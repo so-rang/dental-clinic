@@ -7,7 +7,6 @@ import { DoctorsSection } from "@/components/sections/doctors-section";
 import { EnvironmentSection } from "@/components/sections/environment-section";
 import { LocationSection } from "@/components/sections/location-section";
 import { FaqSection } from "@/components/sections/faq-section";
-import { ReservationSection } from "@/components/sections/reservation-section";
 import { JsonLd } from "@/components/json-ld";
 import {
   clinicSchema,
@@ -55,7 +54,6 @@ export default function HomePage() {
         <EnvironmentSection />
         <LocationSection />
         <FaqSection />
-        <ReservationSection />
       </main>
       <SiteFooter />
     </>
