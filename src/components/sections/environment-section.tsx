@@ -22,7 +22,7 @@ export function EnvironmentSection() {
               id="environment-heading"
               className="mt-6 font-display italic text-display-l leading-[1.1] text-paper"
             >
-              내부 공간.
+              내부 공간
             </h2>
           </Reveal>
           <Reveal delay={0.15} className="md:col-span-6 md:col-start-7">

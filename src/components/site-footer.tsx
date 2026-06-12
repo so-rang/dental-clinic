@@ -1,57 +1,10 @@
 import Link from "next/link";
 import { CLINIC } from "@/data/clinic";
 import { NAV_ITEMS, RESERVATION_HREF, ADMIN_HREF } from "@/lib/nav";
-import { Reveal } from "@/components/reveal";
 
 export function SiteFooter() {
   return (
     <footer className="bg-paper-deep text-ink">
-      {/* CTA band */}
-      <section
-        aria-labelledby="cta-heading"
-        className="border-t border-line"
-      >
-        <div className="container-page py-24 md:py-36 grid md:grid-cols-12 gap-10 md:gap-14 items-end">
-          <Reveal className="md:col-span-7">
-            <p className="text-eyebrow mb-8">Reservation</p>
-            <h2
-              id="cta-heading"
-              className="font-display italic text-display-l text-balance"
-            >
-              상담 30분으로 시작합니다.
-            </h2>
-            <p className="mt-8 max-w-md text-[15px] text-ink-soft leading-relaxed">
-              초진은 약 30분, 정밀 진단(CT · 구강 스캔)과 함께 치료 계획서를
-              서면으로 받아 보실 수 있습니다. 같은 자리에서 진단부터 사후
-              관리까지.
-            </p>
-          </Reveal>
-
-          <Reveal delay={0.15} className="md:col-span-5 flex flex-col gap-5 md:items-end">
-            <Link
-              href={RESERVATION_HREF}
-              className="inline-flex items-center gap-3 border border-ink px-10 py-5 text-[15px] tracking-[0.04em] hover:bg-ink hover:text-paper transition-colors duration-300"
-            >
-              예약 · 문의
-              <span aria-hidden>→</span>
-            </Link>
-            <a
-              href={CLINIC.contact.phoneHref}
-              className="text-[15px] tracking-[0.06em] link-underline"
-            >
-              T. {CLINIC.contact.phoneDisplay}
-            </a>
-            <a
-              href={CLINIC.contact.kakaoHref}
-              target="_blank"
-              rel="noopener"
-              className="text-meta link-underline"
-            >
-              Kakao Channel {CLINIC.contact.kakao}
-            </a>
-          </Reveal>
-        </div>
-      </section>
 
       {/* Footer columns */}
       <div className="border-t border-line">
