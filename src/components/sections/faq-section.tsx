@@ -51,7 +51,7 @@ export function FaqSection() {
                       <p className="text-eyebrow">
                         N°{String(ci + 1).padStart(2, "0")}
                       </p>
-                      <h3 className="mt-3 font-display italic text-[28px] md:text-[36px] leading-tight">
+                      <h3 className="mt-3 font-display italic text-[22px] md:text-[28px] leading-tight">
                         {FAQ_CATEGORIES[cat]}
                       </h3>
                     </div>

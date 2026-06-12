@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { TREATMENTS } from "@/data/treatments";
 import { Reveal } from "@/components/reveal";
 import { SectionLabel } from "@/components/section-label";
@@ -48,10 +47,7 @@ export function TreatmentsSection() {
             return (
               <Reveal key={t.slug} delay={i * 0.08}>
                 <li>
-                  <Link
-                    href={`#${t.slug}`}
-                    className="group block"
-                  >
+                  <article>
                     <MoodPlaceholder
                       tone={tone.tone}
                       pattern={tone.pattern}
@@ -60,29 +56,20 @@ export function TreatmentsSection() {
                       src={t.image}
                       alt={t.imageAlt}
                       sizes="(min-width:1024px) 25vw, (min-width:768px) 50vw, 100vw"
-                      className="transition-[transform,filter] duration-700 group-hover:scale-[1.015]"
                     />
-                    <div className="mt-6 flex items-start justify-between gap-3">
-                      <div>
-                        <p className="text-eyebrow">{t.number}</p>
-                        <h3 className="mt-2 font-display italic text-[28px] md:text-[30px] leading-tight">
-                          {t.name}
-                        </h3>
-                        <p className="mt-1 font-display italic text-[13px] tracking-[0.08em] text-muted">
-                          {t.english}
-                        </p>
-                      </div>
-                      <span
-                        aria-hidden
-                        className="mt-3 inline-flex items-center justify-center w-9 h-9 rounded-full border border-line group-hover:border-ink group-hover:bg-ink group-hover:text-paper transition-colors duration-300"
-                      >
-                        →
-                      </span>
+                    <div className="mt-6">
+                      <p className="text-eyebrow">{t.number}</p>
+                      <h3 className="mt-2 font-display italic text-[22px] md:text-[24px] leading-tight">
+                        {t.name}
+                      </h3>
+                      <p className="mt-1 font-display italic text-[13px] tracking-[0.08em] text-muted">
+                        {t.english}
+                      </p>
                     </div>
                     <p className="mt-5 text-[14px] leading-[1.7] text-ink-soft">
                       {t.tagline}
                     </p>
-                  </Link>
+                  </article>
                 </li>
               </Reveal>
             );

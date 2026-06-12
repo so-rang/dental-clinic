@@ -36,7 +36,7 @@ export function FaqAccordion({
               <span className="font-display italic text-[14px] tracking-[0.08em] text-muted pt-1.5 tabular-nums">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <span className="font-display italic text-[22px] md:text-[28px] leading-[1.3] text-balance group-hover:text-ultramarine transition-colors">
+              <span className="font-display italic text-[18px] md:text-[22px] leading-[1.35] text-balance group-hover:text-ultramarine transition-colors">
                 {item.question}
               </span>
               <span
